@@ -21,14 +21,12 @@
     <input type="submit" value="Login">
 </form>
 
-<% request.setAttribute("username", true);%>
-<% request.setAttribute("password", true);%>
 <c:choose>
     <c:when test="${param.username eq 'admin' && param.password eq 'password'}">
         <c:redirect url="profile.jsp" />
     </c:when>
     <c:otherwise>
-        <c:if test="${param.username eq 'false' }">
+        <c:if test="${param.username ne 'true' }">
             <p style="color: red;">Invalid username or password. Please try again.</p>
         </c:if>
     </c:otherwise>
