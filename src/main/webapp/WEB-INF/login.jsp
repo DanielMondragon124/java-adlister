@@ -21,5 +21,7 @@
             <input type="submit" class="btn btn-primary btn-block" value="Log In">
         </form>
     </div>
+    <% String username = (String)session.getAttribute("user"); %>
+    <h1>Welcome, <%=username%>!</h1>
 </body>
 </html>
